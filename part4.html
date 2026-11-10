@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOEIC Speaking</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙</text></svg>">
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="index.html"><span class="logo">TS</span>TOEIC Speaking</a>
+  <nav class="topnav"></nav>
+</div></header>
+<section class="chhead"><div class="wrap">
+  <a href="index.html" style="color:#fff;opacity:.8;font-size:14px">← 메인으로</a>
+  <h1 id="chTitle"></h1><p id="chSub"></p><div class="meta" id="chMeta"></div>
+</div></section>
+<div class="wrap layout">
+  <aside class="side"><div class="card">
+    <div id="sideNav"></div>
+    <div class="scorebox"><div class="sm">이 챕터 평균 점수</div><div class="big" id="chScore">–</div>
+      <div class="prog" style="margin:6px 0"><i id="chProg"></i></div><div class="sm" id="chScoreSm"></div>
+      <button class="btn ghost sm" id="resetScores" type="button" style="margin-top:10px">점수 초기화</button></div>
+  </div></aside>
+  <main id="main"></main>
+</div>
+<footer class="footer">© 다인원격평생교육직업학원 · 후안샘 · TOEIC Speaking Interactive Study</footer>
+<script src="assets/chapters.js"></script>
+<script src="data/part4.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

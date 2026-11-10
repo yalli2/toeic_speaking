@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TOEIC Speaking START · 인터랙티브 학습 사이트</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙</text></svg>">
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="index.html"><span class="logo">TS</span>TOEIC Speaking</a>
+  <nav class="topnav" id="topnav"></nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <span class="kicker">KCIS · TOEIC Speaking Class</span>
+  <h1>TOEIC Speaking START<br>인터랙티브 학습 사이트</h1>
+  <p>필수 문법부터 Part 1~6, 실전 모의고사 3회까지. 원어민 음성으로 듣고, 타이머에 맞춰 직접 말하고, 정답과 점수를 바로 확인하세요.</p>
+  <div class="stats" id="stats"></div>
+</div></section>
+
+<main class="wrap">
+  <div class="section-title"><div><h2>📚 학습 챕터</h2><p>카드를 눌러 각 챕터로 이동하세요. 진행률은 이 브라우저에 자동 저장됩니다.</p></div>
+    <button class="btn ghost sm" id="resetAll" type="button">전체 기록 초기화</button></div>
+  <div class="grid" id="chapters"></div>
+
+  <div class="section-title"><div><h2>🧭 TOEIC Speaking 시험 구성</h2><p>현재 시험(2022년 6월 개정) 기준 · 총 11문항 · 약 20분 · 0~200점</p></div></div>
+  <div class="card" style="overflow-x:auto">
+    <table class="fmt">
+      <tr><th>문항</th><th>유형</th><th>준비 시간</th><th>답변 시간</th><th>평가 기준</th><th>이 사이트</th></tr>
+      <tr><td>Q1–2</td><td>Read a text aloud · 지문 읽기</td><td>45초</td><td>45초</td><td>발음, 억양과 강세</td><td><a href="part1.html">Part 1</a></td></tr>
+      <tr><td>Q3–4</td><td>Describe a picture · 사진 묘사</td><td>45초</td><td>30초</td><td>+ 문법, 어휘, 일관성</td><td><a href="part2.html">Part 2</a></td></tr>
+      <tr><td>Q5–7</td><td>Respond to questions · 질문에 답하기</td><td>3초</td><td>15·15·30초</td><td>+ 내용의 관련성·완성도</td><td><a href="part3.html">Part 3</a></td></tr>
+      <tr><td>Q8–10</td><td>Respond using information · 표 보고 답하기</td><td>표 읽기 45초 + 각 3초</td><td>15·15·30초</td><td>+ 정보의 정확성</td><td><a href="part4.html">Part 4</a></td></tr>
+      <tr class="dropped"><td>(구) Q10</td><td>Propose a solution · 해결책 제안</td><td>30초</td><td>60초</td><td>2022년 개정으로 제외</td><td><a href="part5.html" style="text-decoration:none">Part 5 (확장 연습)</a></td></tr>
+      <tr><td>Q11</td><td>Express an opinion · 의견 제시</td><td>45초</td><td>60초</td><td>+ 논리적 근거와 예시</td><td><a href="part6.html">Part 6</a></td></tr>
+    </table>
+  </div>
+
+  <div class="section-title"><div><h2>🛠 사용 방법</h2><p>수업 중 함께, 또는 집에서 혼자 연습할 때</p></div></div>
+  <div class="grid">
+    <div class="card"><h3 style="margin-top:0">🔊 원어민 음성</h3><p class="small" style="font-size:14.5px">모든 예문·질문·모범답안의 ▶ 버튼을 누르면 미국·영국 원어민 스타일의 자연스러운 음성이 재생됩니다. 한 번 더 누르면 멈춥니다.</p></div>
+    <div class="card"><h3 style="margin-top:0">⏱ 실전 타이머 + 녹음</h3><p class="small" style="font-size:14.5px">[시작]을 누르면 실제 시험처럼 준비 시간 → 신호음 → 답변 시간이 진행되고, 내 목소리가 녹음·자동 받아쓰기 됩니다. (Chrome/Edge + 마이크 권장)</p></div>
+    <div class="card"><h3 style="margin-top:0">✅ 자동 채점</h3><p class="small" style="font-size:14.5px">객관식·빈칸·문장 배열·끊어 읽기는 정답과 점수가 즉시 나오고, 말하기는 정확도·핵심 표현·답변 길이로 예상 점수를 보여 줍니다.</p></div>
+    <div class="card"><h3 style="margin-top:0">✍ 마이크가 없다면</h3><p class="small" style="font-size:14.5px">답변 칸에 영어로 직접 입력한 뒤 [채점하기]를 누르면 같은 방식으로 채점됩니다. 모범답안과 해석도 언제든 확인할 수 있어요.</p></div>
+  </div>
+  <p class="small" style="margin-top:22px">※ 이 사이트의 지문·문항·모범답안은 시중 교재의 학습 순서와 유형을 참고하여 수업용으로 새로 작성·변형한 것입니다.</p>
+</main>
+<footer class="footer">© 다인원격평생교육직업학원 · 후안샘 · TOEIC Speaking Interactive Study</footer>
+
+<script src="assets/chapters.js"></script>
+<script src="assets/counts.js"></script>
+<script>
+(function(){
+  const all=(()=>{try{return JSON.parse(localStorage.getItem('ts_scores')||'{}')}catch(e){return {}}})();
+  const nav=document.getElementById('topnav'),grid=document.getElementById('chapters');
+  let totDone=0,tot=0,sumPct=0,nPct=0;
+  CHAPTERS.forEach((c,i)=>{
+    const a=document.createElement('a');a.href=c.href;a.textContent=c.short;nav.appendChild(a);
+    const s=all[c.id]||{};const ks=Object.keys(s);let E=0,M=0;ks.forEach(k=>{E+=s[k].e;M+=s[k].m;});
+    const pct=M?Math.round(E/M*100):null;if(pct!=null){sumPct+=pct;nPct++;}
+    totDone+=ks.length;
+    const card=document.createElement('a');card.className='card chcard';card.href=c.href;
+    card.innerHTML=`<span class="tag ${c.old?'old':''}">${String(i).padStart(2,'0')==='00'?'START':c.tag}</span><h3>${c.title}</h3><p>${c.desc}</p><ul>${c.items.map(x=>`<li>${x}</li>`).join('')}</ul>
+      <div class="proglbl"><span>${ks.length?`완료 ${ks.length} / ${(window.BLOCK_COUNTS||{})[c.id]||'?'} 활동`:'아직 시작 전'}</span><span>${pct!=null?'평균 '+pct+'점':''}</span></div><div class="prog"><i style="width:${Math.min(100,ks.length/((window.BLOCK_COUNTS||{})[c.id]||20)*100)}%"></i></div>`;
+    grid.appendChild(card);
+  });
+  document.getElementById('stats').innerHTML=`<div class="stat"><b>${CHAPTERS.length}</b>챕터</div><div class="stat"><b>${totDone}</b>완료한 활동</div><div class="stat"><b>${nPct?Math.round(sumPct/nPct)+'점':'–'}</b>평균 점수</div>`;
+  document.getElementById('resetAll').onclick=()=>{if(confirm('모든 챕터의 점수 기록을 지울까요?')){localStorage.removeItem('ts_scores');location.reload();}};
+})();
+</script>
+</body>
+</html>
