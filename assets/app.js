@@ -187,7 +187,7 @@ function blockShell(b,sec,idx){
 function checkBar(onCheck,onReset){
   const bar=el('div',{class:'bar'});const res=el('span',{class:'result'});
   const c=el('button',{class:'btn',type:'button'},'정답 확인');const r=el('button',{class:'btn ghost',type:'button'},'다시 풀기');
-  c.onclick=()=>{const s=onCheck();res.textContent=`${s[0]} / ${s[1]} 정답 · ${Math.round(s[0]/s[1]*100)}점`;res.classList.add('show');};
+  c.onclick=()=>{const s=onCheck();res.textContent=s[2]?`${s[2]} ${Math.round(s[0]/s[1]*100)}점`:`${s[0]} / ${s[1]} 정답 · ${Math.round(s[0]/s[1]*100)}점`;res.classList.add('show');};
   r.onclick=()=>{onReset();res.classList.remove('show');};
   bar.append(res,r,c);return bar;
 }
@@ -250,7 +250,7 @@ R.pause=(b,d,blk)=>{
     const fb=el('div',{class:'fb'});q.append(box,fb);d.appendChild(q);st.push({gaps,ans,fb});
   });
   d.appendChild(checkBar(()=>{let tot=0,E=0;b.items.forEach((it,i)=>{const s=st[i];s.locked=true;let hit=0,extra=0;s.gaps.forEach((g,k)=>{const on=g.classList.contains('on'),a=s.ans.has(k);g.classList.remove('on','hit','miss','extra');if(on&&a){g.classList.add('hit');hit++;}else if(a){g.classList.add('miss');}else if(on){g.classList.add('extra');extra++;}});
-    const sc=Math.max(0,(hit-extra*0.5))/s.ans.size;E+=sc;tot++;s.fb.innerHTML=`<span class="r">초록 / = 맞힘</span> · <span class="w">빨강 / = 놓친 곳</span> · <span style="color:var(--warn);font-weight:700">노랑 = 불필요</span> → 일치도 ${Math.round(sc*100)}%`+(it.exp?`<div class="exp">${it.exp}</div>`:'');s.fb.classList.add('show');});setScore(blk,E/tot*blk.max);return [Math.round(E*10)/10,tot];},
+    const sc=Math.max(0,(hit-extra*0.5))/s.ans.size;E+=sc;tot++;s.fb.innerHTML=`<span class="r">초록 / = 맞힘</span> · <span class="w">빨강 / = 놓친 곳</span> · <span style="color:var(--warn);font-weight:700">노랑 = 불필요</span> → 일치도 ${Math.round(sc*100)}%`+(it.exp?`<div class="exp">${it.exp}</div>`:'');s.fb.classList.add('show');});setScore(blk,E/tot*blk.max);return [E,tot,'평균 일치도'];},
   ()=>{st.forEach(s=>{s.locked=false;s.gaps.forEach(g=>g.className='g');s.fb.classList.remove('show');});}));
 };
 /* speaking blocks */
